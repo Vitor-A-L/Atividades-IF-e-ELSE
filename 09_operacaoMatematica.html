@@ -1,0 +1,60 @@
+<script>
+    /*
+    PROBLEMA: OPERAÇÃO MATEMÁTICA
+    Faça um script que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número é:
+    - par ou ímpar;
+    - positivo ou negativo;
+    - inteiro ou decimal.
+    */
+
+    //ENTRADA
+    const numero1 = Number(prompt("Digite o primeiro numero :"));
+    const numero2 = Number(prompt("Digite o segundo numero :"));
+    const operacao = prompt("Digite a operação que deseja fazer, + , - , * (multiplicação) , / (divisão)");
+    //PROCESSAMENTO
+    let resultado = 0;
+    let parOuImpar = ""
+    let positivoOuNegativo = ""
+    let inteiroOuDecimal = ""
+    if (operacao === "+") {
+        resultado = numero1 + numero2
+    }
+    else if (operacao === "-") {
+        resultado = numero1 - numero2781794
+    }
+    else if (operacao === "*") {
+        resultado = numero1 * numero2
+    }
+    else if (operacao === "/") {
+        resultado = numero1 / numero2
+    } else {
+        alert("Operação invalida")
+    }
+    if (resultado % 2 == 0) {
+        parOuImpar = "numero par"
+    } else {
+        parOuImpar = "numero impar"
+    }
+    if (resultado < 0) {
+        positivoNegativo = "numero negativo"
+    } else if (resultado > 0) {
+        positivoNegativo = "numero positivo"
+    } else {
+        positivoNegativo = "numero neutro (0)"
+    }
+    if (Number(resultado)) {
+        inteiroDecimal = "numero inteiro"
+    } else {
+        inteiroDecimal = "numero decimal"
+        
+    }
+    if (resultado === 0) {
+        inteiroOuDecimal = "numero neutro (0)"
+    } else if (Number(resultado)) {
+        inteiroOuDecimal = "numero inteiro"
+    } else {
+        inteiroOuDecimal = "numero decimal"
+    }
+    //SAÍDA
+    alert(`O resultado é  ${resultado}, ele é um ${parOuImpar}, ${positivoOuNegativo} e um ${inteiroOuDecimal}`)
+</script>
